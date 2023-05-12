@@ -1,23 +1,22 @@
 <template>
-  <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>  
+    <AppBarVue/>
+    <v-main>
+      <router-view/>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AppBarVue from './components/AppBar.vue';
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  components:{
+    AppBarVue
+  },
+  data: () => ({
+    route: 0
+  }),
+};
 </script>
-
-<style>
-* {
-  margin: 0;
-  padding: 0;
-}
-</style>
