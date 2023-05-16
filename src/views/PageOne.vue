@@ -51,7 +51,7 @@
                 <v-btn style="background: linear-gradient(100.24deg,#9945f9 8.35%,#2339fd 94.57%);"  color="" height="75px" width="100px" elevation="24" shaped="true">最大</v-btn>
               </v-row>
               <v-row class="d-flex justify-center">
-                  <!-- <v-btn outlined class="my-6" x-large width="150" style="color:aliceblue">加入白名单</v-btn> -->
+                  <v-btn outlined class="my-6" x-large width="150" style="color:aliceblue">加入白名单</v-btn>
               </v-row>
               <v-row class="justify-center">
                 <v-col cols="3">

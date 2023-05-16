@@ -4,7 +4,7 @@
         <v-img v-if="!$vuetify.breakpoint.mobile" max-height="100" max-width="200" src="../assets/logo.svg" @click="$router.push('/')" style="cursor: pointer;"></v-img>
         <v-spacer></v-spacer>
         <v-btn-toggle tile mandatory group>
-          <v-btn :width="$vuetify.breakpoint.mobile? '80':'100'" class="text-h6 white--text" to="/">首页</v-btn>
+          <v-btn :width="$vuetify.breakpoint.mobile? '80':'100'" class="text-h6 white--text" to="/">Airdrop</v-btn>
           <v-btn :width="$vuetify.breakpoint.mobile? '80':'100'" class="text-h6 white--text" to="/PageOne">IDO</v-btn>
           <v-btn :width="$vuetify.breakpoint.mobile? '80':'100'" class="text-h6 white--text" to="/PageTwo">页2</v-btn>
         </v-btn-toggle>
@@ -101,6 +101,7 @@ import Web3 from 'web3';
                     alert("Failed to connect to wallet");
                 }
             } else {
+                window.open('https://metamask.io/');
                 console.log('Please install MetaMask');
             }
             
