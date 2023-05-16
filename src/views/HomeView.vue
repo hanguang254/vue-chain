@@ -36,8 +36,8 @@
   
   .Box-div-one {
     border-style: solid;
-    width:1100px;
-    height: 650px;
+    width:800px;
+    height: 620px;
     background-color: rgb(6, 8, 24);
     border-radius: 16px;
     border: 3px solid blueviolet;
