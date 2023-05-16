@@ -25,17 +25,19 @@
 
 <style lang="scss" scoped>
 .home {
-  padding-top: 50px;
+  padding-top: 40px;
   width: 100%;
   height: 100%;
   display: flex ;
   justify-content: center;
   align-items: center;
-  padding: 10px 10px 10px 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  
   .Box-div-one {
     border-style: solid;
     width:1100px;
-    height: 600px;
+    height: 650px;
     background-color: rgb(6, 8, 24);
     border-radius: 16px;
     border: 3px solid blueviolet;
