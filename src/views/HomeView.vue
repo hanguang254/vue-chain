@@ -1,21 +1,19 @@
 <template>
   <div class="home">
-    <div class="Box-div-one">
-      <div style="width: 100%;height: 100%;">
+    <v-card elevation="16" class="Box-div-one" dark>
+      <v-sheet style="width: 100%;height: 100%;">
         <h1 class="H1-title" style="text-align: center;">Claim Airdrop</h1>
         <div>
           <h2 style="text-align: center;color: aliceblue;">test</h2>
         </div>
-        <v-sheet color="rgb(6, 8, 24)">
+        <v-sheet>
           <div class="Box-button">
               <v-btn class="mr-10" color="rgb(51, 212, 250)" >claim</v-btn>
               <v-btn color="rgb(51, 212, 250)">claim2</v-btn>
           </div>
-            
         </v-sheet>
-
-      </div>
-    </div>
+      </v-sheet>
+    </v-card>
   </div>
 </template>
 
@@ -38,7 +36,6 @@
     border-style: solid;
     width:800px;
     height: 620px;
-    background-color: rgb(6, 8, 24);
     border-radius: 16px;
     border: 3px solid blueviolet;
     .H1-title {

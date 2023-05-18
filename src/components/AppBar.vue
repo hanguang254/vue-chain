@@ -4,9 +4,9 @@
         <v-img v-if="!$vuetify.breakpoint.mobile" max-height="100" max-width="200" src="../assets/logo.svg" @click="$router.push('/')" style="cursor: pointer;"></v-img>
         <v-spacer></v-spacer>
         <v-btn-toggle tile mandatory group>
-          <v-btn :width="$vuetify.breakpoint.mobile? '80':'100'" class="text-h6 white--text" to="/">Airdrop</v-btn>
-          <v-btn :width="$vuetify.breakpoint.mobile? '80':'100'" class="text-h6 white--text" to="/PageOne">IDO</v-btn>
-          <v-btn :width="$vuetify.breakpoint.mobile? '80':'100'" class="text-h6 white--text" to="/PageTwo">页2</v-btn>
+          <v-btn class="text-h6 white--text text-capitalize" to="/">Airdrop</v-btn>
+          <v-btn class="text-h6 white--text text-capitalize" to="/PageOne">IDO</v-btn>
+          <v-btn class="text-h6 white--text text-capitalize" to="/PageTwo">页2</v-btn>
         </v-btn-toggle>
 
         <v-spacer></v-spacer>
@@ -16,14 +16,14 @@
             <v-btn dark v-bind="attrs" v-on="on" 
               color="primary" outlined :ripple="false" 
               :large="!$vuetify.breakpoint.mobile" 
-              class="mx-2 text-h6"
+              class="mx-2 text-h6 text-capitalize"
               v-show="!isWalletConnected"
               style=""
               >
-              <!-- <v-icon color="primary">
+              <v-icon color="primary" v-if="$vuetify.breakpoint.mobile">
                 mdi-wallet
-              </v-icon> -->
-              ConnectWallet
+              </v-icon>
+              {{ $vuetify.breakpoint.mobile? ``:`ConnectWallet` }}
             </v-btn>
           </template>
           
@@ -36,7 +36,7 @@
               style=""
               >
               <!-- <h2 style="color:aliceblue;">Connect Wallet</h2> -->
-              <v-btn outlined large @click="dialog = false, connectWallet()" style="color: aliceblue;">
+              <v-btn class="text-capitalize" outlined large @click="dialog = false, connectWallet()" style="color: aliceblue;">
                 <img src="https://docs.metamask.io/img/metamask-fox.svg" alt="">
                 Metamask
               </v-btn>

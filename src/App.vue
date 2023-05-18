@@ -36,7 +36,11 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
+::-webkit-scrollbar {
+  width: 0 !important;
+}
+
 .v-main{
   div{
     z-index: 1;
