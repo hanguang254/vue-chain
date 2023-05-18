@@ -46,18 +46,30 @@
             </v-btn>
           </v-card>
         </v-dialog>
-
-        <span class="amount-span" v-show="isWalletConnected">
+        <div>
+          <v-menu open-on-hover offset-y nudge-bottom="10" left>
+            <template v-slot:activator="{ on, attrs }">
+              <span class="amount-span" v-show="isWalletConnected" v-bind="attrs" v-on="on">
               {{ walletAddress.substring(0, 4) }}...{{ walletAddress.substring(walletAddress.length - 4) }}
-        </span>
-        <v-btn class="disconnect"
-            v-show="isWalletConnected"
-            @click="disconnectWallet()"
-            color="rgb(23, 241, 221)"
-        >
-          Disconnect
-        </v-btn>
-
+              </span>
+            </template>
+            <v-card class="dis-card-connect" hover>
+              <span>图标剧中</span>
+              
+              <v-sheet color="rgb(21, 27, 44)" class="d-flex justify-center">
+                <v-btn class="disconnect align-self-center"
+                  v-show="isWalletConnected"
+                  @click="disconnectWallet()"
+                  color="rgb(23, 241, 221)"
+                  >
+                  Disconnect
+                </v-btn>
+              </v-sheet>
+            </v-card>
+            
+          </v-menu>
+        </div>
+        
       </v-app-bar>
     </v-hover>
 </template>
@@ -145,7 +157,7 @@ import Web3 from 'web3';
 </script>
 
 
-<style scopedc="css">
+<style lang="scss" scoped>
     .amount-span {
       color: aliceblue;
       border: 2px solid rgb(23, 241, 221);
@@ -155,5 +167,13 @@ import Web3 from 'web3';
       padding-left: 10px;
       padding-right: 10px;
       margin-right: 10px;
+    }
+    .dis-card-connect {
+      border-style: solid;
+      border: solid 2px rgb(23, 241, 221);
+      background-color: rgb(21, 27, 44);
+      border-radius: 12px;
+      width: 200px;
+      height: 200px;
     }
 </style>

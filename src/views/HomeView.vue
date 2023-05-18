@@ -1,6 +1,9 @@
 <template>
   <div class="home">
-    <v-card elevation="16" class="Box-div-one" dark>
+    <!-- <v-sheet>
+        <span>这是一项面对所有web3的挑战</span>
+    </v-sheet> -->
+    <v-card elevation="16" class="Box-div-one" dark >
       <v-sheet style="width: 100%;height: 100%;">
         <h1 class="H1-title" style="text-align: center;">Claim Airdrop</h1>
         <div>
@@ -23,7 +26,7 @@
 
 <style lang="scss" scoped>
 .home {
-  padding-top: 40px;
+  // padding-top: -20px;
   width: 100%;
   height: 100%;
   display: flex ;
@@ -35,7 +38,7 @@
   .Box-div-one {
     border-style: solid;
     width:800px;
-    height: 620px;
+    height: 500px;
     border-radius: 16px;
     border: 3px solid blueviolet;
     .H1-title {

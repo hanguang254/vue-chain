@@ -17,7 +17,7 @@
       </v-row>
       <v-row>
         <v-col>
-          <v-card height="600" elevation="16" class="rounded-xl pa-10" dark style="border: 3px solid blueviolet;">
+          <v-card height="530" elevation="16" class="rounded-xl pa-10" dark style="border: 3px solid blueviolet;">
             <v-container>
               <v-row class="justify-center my-2">
                 <v-col>
